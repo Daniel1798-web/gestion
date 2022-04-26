@@ -1,0 +1,226 @@
+
+
+.botonesPhone{
+    display: none;
+}
+
+.dady{
+
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 10px;
+
+}
+
+.cabecera{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(255, 247, 247);
+    margin:0%;
+    padding: 10px;
+}
+
+.bat{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 247, 247);
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.regreso{
+    display: flex;
+    padding: 10px;
+    border-radius: 10%;
+    background-color: white;
+}
+
+.casita{
+    width: 40px;
+    background-color: white;
+}
+
+
+.añadirL, .añadirC , .borrar
+{
+
+    background-color: rgb(62, 64, 223);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    word-wrap:break-word;
+
+
+}
+
+
+
+
+
+.borrar:hover
+{
+    background-color: red;
+    cursor: pointer;
+}
+
+.añadirL:hover , .añadirC:hover
+{
+    background-color: green;
+    cursor: pointer;
+}
+
+.textoPhone{
+    display: none;
+}
+
+.textoPhone2{
+    display: none;
+}
+
+
+.texto
+{
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 20%;
+    height: 40%;
+    border: 2px solid rgb(194, 191, 191) ;
+    border-radius: 20px;
+    text-decoration: none;
+    outline: none;
+    font-size: 150%;
+}
+
+
+.texto2
+{
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 20%;
+    height: 40%;
+    border: 2px solid rgb(194, 191, 191) ;
+    border-radius: 20px;
+    text-decoration: none;
+    outline: none;
+    font-size: 150%;
+}
+
+.huno
+{
+    background-color: rgb(236, 233, 233);
+    margin: 0%;
+    margin-top: 0px;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+
+
+
+
+.tableroListaUno
+{
+
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    margin: 1%;
+    background-color: rgb(0, 0, 0);
+    border:2px solid rgb(190, 186, 186);
+
+    background-color: rgb(243, 239, 239);
+    box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    height: 50%;
+    width: 50%;
+    height: 50%
+}
+
+
+.tableroListaDos
+{
+    display:flex;
+    justify-content: right;
+    align-items: flex-start;
+    margin: 1%;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(190, 186, 186);;
+
+    background-color: rgb(243, 239, 239);
+    box-sizing: border-box;
+    width: 50%;
+    height: 50%;
+    width: 50%;
+    height: 50%
+}
+
+
+
+
+
+.dad
+{
+   display: flex;
+   justify-content: space-between;
+}
+
+.ulproduct{
+    margin: 0;
+    width: 100%;
+    list-style: none;
+}
+
+.product{
+    margin: 0;
+}
+
+.productText{
+float: left;
+ width: 100%;
+ font-size: 25px;
+padding: 5px;
+}
+
+
+
+
+.check
+{
+    float: right;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.cosa{
+    display: flex;
+    justify-content: start;
+    margin: 0;
+    width: 400px;
+}
