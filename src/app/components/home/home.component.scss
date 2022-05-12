@@ -1,0 +1,54 @@
+
+.padre{
+  width: 100%;
+  height: 100%;
+}
+
+.titulo{
+  margin-top:200px ;
+
+  text-align: center;
+}
+
+.elemento1{
+
+  width: 100%;
+  height: 100px;
+}
+
+.paginator{
+ background-color:  #ecf0f3;
+}
+
+ ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+
+}
+
+
+
+li{
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  height: 100px;
+  background-color: violet;
+  text-align: center;
+}
+
+  li:hover{
+    cursor: pointer;
+  }
+
+p{
+  text-align: center;
+}
+
+
+
+
+
+

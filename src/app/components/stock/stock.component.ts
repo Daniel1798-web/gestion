@@ -25,13 +25,13 @@ export class StockComponent implements OnInit {
   }
 
   AgregarProducto(){
-      this.lista1.push({producto:this.agregarProducto, fecha:this.agregarFecha, eliminar:false})
+      this.lista1.push({producto:this.agregarProducto, fecha:this.agregarFecha, eliminar:false, id:0})
       this.agregarProducto = "";
       console.log(this.lista1)
   }
 
   AgregarProducto2(){
-    this.lista2.push({producto:this.agregarProducto, fecha:this.agregarFecha, eliminar:false})
+    this.lista2.push({producto:this.agregarProducto, fecha:this.agregarFecha, eliminar:false, id:0})
     this.agregarProducto = "";
     console.log(this.lista2)
   }

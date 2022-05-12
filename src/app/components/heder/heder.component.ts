@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-heder',
@@ -9,11 +9,21 @@ export class HederComponent implements OnInit {
 
   constructor() { }
   activeMenu = false;
+  stocksGuardados:boolean = false;
+
+
+  @Output() activarGuardados = new EventEmitter<boolean>();
 
 
   ngOnInit(): void {
   }
   toggleMenu(){
     this.activeMenu = !this.activeMenu
+  }
+
+  guardados(){
+    this.stocksGuardados = !this.stocksGuardados
+    this.activarGuardados.emit(this.stocksGuardados)
+    console.log("activa")
   }
 }

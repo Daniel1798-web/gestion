@@ -4,7 +4,7 @@
     <button (click)="toggleMenu()">
       <img src="./assets/png/icon_menu.svg" alt="menu">
     </button>
-    <a href="">
+    <a href="" >
       <img src="./assets/png/logo_yard_sale.svg" alt="logo">
     </a>
     <a href="">
@@ -15,8 +15,8 @@
     <button (click)="toggleMenu()">close</button>
     <ul>
       <li><a routerLink="/stock">Crear Stock</a></li>
-      <li><a href="">Stock Guardados</a></li>
-      <li><a href="">Información</a></li>
+      <li><button >Stock Guardados</button></li>
+      <li><a href="#">Información</a></li>
     </ul>
   </div>
 </div>
@@ -29,8 +29,8 @@
       </a>
       <ul>
         <li><a routerLink="/stock">Crear Stock</a></li>
-        <li><a href=""> Guardados</a></li>
-        <li><a href="">Información</a></li>
+        <li><a class="enlace" (click)="guardados()"> Guardados</a></li>
+        <li><a href="#">Información</a></li>
       </ul>
     </nav>
     <div class="info">

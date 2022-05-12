@@ -30,7 +30,12 @@
     transform: translateX(0);
 
   }
+
 }
+
+.enlace:hover{
+  cursor: pointer;
+  }
 
 .hide-mobile {
   display: none;
@@ -52,7 +57,7 @@
       justify-content: space-around;
       list-style: none;
       a {
-        
+
         margin: 0 .2em;
         color: inherit;
         text-decoration: none;
