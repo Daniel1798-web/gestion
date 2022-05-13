@@ -18,9 +18,19 @@
 
 .paginator{
  background-color:  #ecf0f3;
+ display: flex;
+ justify-content: center;
 }
 
- ul{
+.paginatorMobile{
+  display: none;
+}
+
+.mat-paginator-page-size{
+  display: none;
+}
+
+ .ulPaginator{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -30,12 +40,13 @@
 
 
 
-li{
+.liPaginator{
   display: flex;
   flex-direction: row;
   width: 100px;
   height: 100px;
-  background-color: violet;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
   text-align: center;
 }
 
@@ -43,11 +54,73 @@ li{
     cursor: pointer;
   }
 
+  .aPaginator{
+    text-decoration: none;
+    width: 100%;
+  }
+
 p{
+  margin-top:40px;
+  width: 100%;
+  height: 50%;
   text-align: center;
 }
 
+.elemento2{
+  width: 800px;
+  height: 250px;
+  border:2px solid rgb(185, 185, 185);
+  box-shadow: 2px 2px 2px 2px rgb(216, 216, 216);
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
 
+}
+
+.h1Info{
+  text-align: center;
+  padding-top: 10px;
+
+}
+
+
+.inforCompany{
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 200px;
+  margin-right: auto;
+}
+
+.inforNumber{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.inforImg{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.h2Info{
+  text-align: center;
+
+}
+
+@media(max-width: 400px){
+  .paginator{
+    display: none;
+  }
+
+  .paginatorMobile{
+    background-color:  #ecf0f3;
+    display: flex;
+    justify-content: center;
+   }
+}
 
 
 

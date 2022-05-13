@@ -4,9 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'paginator'
 })
 export class PaginatorPipe implements PipeTransform {
-  itemsPerPageLabel = 'number of page';
-  nextPageLabel     = 'next';
-  previousPageLabel = 'previous';
+
 
   transform(array: any[], page_size:any, page_number:number = 30):any[]{
     if (!array.length) return[]

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
-import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,10 +30,11 @@ import { PaginatorPipe } from './pipes/paginator.pipe';
     FormsModule,
     HttpClientModule,
     MatPaginatorModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    
 
   ],
-  providers: [],
+  providers: [ MatPaginatorIntl],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

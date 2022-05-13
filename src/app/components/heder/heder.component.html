@@ -2,22 +2,21 @@
 <div class="show-mobile">
   <div>
     <button (click)="toggleMenu()">
-      <img src="./assets/png/icon_menu.svg" alt="menu">
-    </button>
-    <a href="" >
-      <img src="./assets/png/logo_yard_sale.svg" alt="logo">
+    <a >
+      <img src="../../../assets/png/icon_menu.svg" alt="logo">
     </a>
-    <a href="">
-      <img src="./assets/png/icon_shopping_cart.svg" alt="logo">
-    </a>
-  </div>
+  </button>
+
+  <img src="../../../assets/png/osoMobile.png">
+
   <div class="side-menu" [class.active]="activeMenu">
-    <button (click)="toggleMenu()">close</button>
+    <button class="xMobile" (click)="toggleMenu()"><img src="../../../assets/png/x.png"></button>
     <ul>
       <li><a routerLink="/stock">Crear Stock</a></li>
-      <li><button >Stock Guardados</button></li>
-      <li><a href="#">Información</a></li>
+      <li><button class="enlace" (click)="guardados()">Stock Guardados</button></li>
+      <li><a class="enlace" (click)="informacion()">Información</a></li>
     </ul>
+  </div>
   </div>
 </div>
 
@@ -25,12 +24,12 @@
   <div>
     <nav>
       <a class="logo" href="">
-        <img src="./assets/png/logo_yard_sale.svg" alt="logo">
+        <img src="../../../assets/png/oso.png" alt="logo">
       </a>
       <ul>
         <li><a routerLink="/stock">Crear Stock</a></li>
         <li><a class="enlace" (click)="guardados()"> Guardados</a></li>
-        <li><a href="#">Información</a></li>
+        <li><a class="enlace" (click)="informacion()">Información</a></li>
       </ul>
     </nav>
     <div class="info">

@@ -1,10 +1,22 @@
-<app-heder (activarGuardados)="showStockGuardados($event)"></app-heder>
+<app-heder (activarInformacion)="showInformacion($event)"
+(activarGuardados)="showStockGuardados($event)"></app-heder>
 <div class="padre">
 
+  <mat-paginator
+    style-paginator showFirstLastButtons
+    class="paginatorMobile"
+    [length]="listaStocks.length"
+    [pageSize]="page_size"
+    [pageSizeOptions]="pageSizeOptions2"
+    (page)="handlePage($event)"
+    aria-label="Select page">
+</mat-paginator>
 
-  <div class="elemento1" *ngIf="activar2" >
+<!--Mostrar Stocks Guardados-->
+  <div class="elemento1" *ngIf="activar2 " >
     <div class="titulo"> <h1>Stocks guardados</h1> </div>
     <mat-paginator
+    style-paginator showFirstLastButtons
     class="paginator"
     [length]="listaStocks.length"
     [pageSize]="page_size"
@@ -12,15 +24,44 @@
     (page)="handlePage($event)"
     aria-label="Select page">
 </mat-paginator>
-<ul>
-  <li *ngFor="let l of listaStocks | paginator:page_size:page_number">
-    <a href="/">{{l.id}}</a>
-</li>
-</ul>
-<button (click)="addStock()">añadir</button>
+
+<ul class="ulPaginator">
+  <li class="liPaginator" *ngFor="let l of listaStocks | paginator:page_size:page_number">
+    <a class="aPaginator" href="/"><p >{{l.id}}</p></a>
+    </li>
+  </ul>
+</div>
+<!--fin-->
+
+<!--Mostrar Información-->
+<div class="elemento2" *ngIf="activarInfo ">
+
+    <h1 class="h1Info">Información</h1>
+
+    <h2 class="h2Info">{{helpText}}</h2>
+
+<div class="inforCompany">
+
+    <div class="inforNumber">
+      <a target="_blank" href="https://wa.me/543516838934"><img class="inforImg" src="../../../assets/png/telefono.png"></a>
+      <a target="_blank" href="mailto:danrieloto@gmail.com"><img class="inforImg" src="../../../assets/png/email.png"></a>
+    </div>
+
+    <div class="inforNumber">
+    </div>
+
+ </div>
+
+
 
   </div>
 
 
 
+
 </div>
+
+
+
+
+

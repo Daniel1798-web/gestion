@@ -9,3 +9,9 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-paginator-page-size {
+  display: none;
+  align-items: baseline;
+  margin-right: 8px;
+}

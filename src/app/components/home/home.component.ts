@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 import { objeto1 } from '../../model/objeto1.model'
 
+import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
+
+
 
 @Component({
   selector: 'app-home',
@@ -11,9 +14,23 @@ import { objeto1 } from '../../model/objeto1.model'
 export class HomeComponent implements OnInit {
 
 
+  constructor(
+    public _MatPaginatorIntl: MatPaginatorIntl
+  ) {}
+
+  ngOnInit():void {
+    this._MatPaginatorIntl.itemsPerPageLabel = 'your custom text 1';
+    this._MatPaginatorIntl.firstPageLabel = 'your custom text 2';
+    this._MatPaginatorIntl.itemsPerPageLabel = '';
+    this._MatPaginatorIntl.lastPageLabel = 'your custom text 4';
+    this._MatPaginatorIntl.nextPageLabel = 'your custom text 5';
+    this._MatPaginatorIntl.previousPageLabel = 'your custom text 5';
+  }
+
   identificador:number = 0;
   dia:number = 1;
   activar2 = false;
+  activarInfo = false;
 
   listaStocks: Array<objeto1> = [
     {
@@ -87,14 +104,16 @@ export class HomeComponent implements OnInit {
   stocksMostrar:any = []
 
 
-  page_size:number = 5;
+  page_size:number = 0;
   page_number:number = 1;
-  pageSizeOptions = [5,10,20,25]
-  array:Array<any> = []
+  pageSizeOptions = [5]
+  array:Array<any> = [5]
+
+  pageSizeOptions2 = [1]
 
 
+  helpText:string = "Ante cualquier problema consultenos";
 
-  constructor() { }
   stocks: objeto1 =
     {
       producto: "cosa",
@@ -109,20 +128,25 @@ export class HomeComponent implements OnInit {
   carga1(product: Array<object>) {
     console.log(product)
   }
-  ngOnInit(): void {
-  }
+
 
   showStockGuardados(valor: boolean) {
+    this.activarInfo = false
     this.activar2 = valor
+
+  }
+
+  showInformacion(valor: boolean){
+    this.activar2 = false
+    this.activarInfo = valor
+
   }
 
 
 
   addStock() {
     this.listaStocks.push({producto: "cosa",fecha: this.dia,eliminar: false,id: this.identificador})
-    this.identificador ++
-
-}
+    this.identificador ++}
 
   handlePage(e: PageEvent){
     this.page_size = e.pageSize
