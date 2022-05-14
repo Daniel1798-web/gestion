@@ -48,6 +48,8 @@
 
  <div class="tableroListaUno">
      <ul class="ulproduct" >
+      <h2 >Lista1</h2>
+
  <li class="product" *ngFor="let p of lista1" >
    <p class="productText">{{p.producto}} {{p.fecha| date:"dd/MM/yyyy"}}<input type="checkbox" class="check" [(ngModel)]="p.eliminar"></p>
  </li>
@@ -58,6 +60,8 @@
 
  <div class="tableroListaDos">
    <ul class="ulproduct" >
+    <h2 >Lista2</h2>
+
      <li  class="product" *ngFor="let p of lista2" >
      <p class="productText">{{p.producto}} {{p.fecha | date:"dd/MM/yyyy"}}<input type="checkbox" class="check"  [(ngModel)]="p.eliminar">
      </li>
@@ -66,11 +70,11 @@
 
 
  </div>
-
-
- </div>
-
 </div>
-<div>
-  <button>click</button>
+
+ <div class="saveDiv">
+  <a class="saveButton" (click)="guardarStock()"><img src="../../../assets/png/saveDisk.png"></a>
+  <p>Guardar Stock</p>
+  </div>
 </div>
+

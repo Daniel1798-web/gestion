@@ -13,11 +13,12 @@ export class StockComponent implements OnInit {
 
 
   agregarProducto: string | number = ""
-   lista1:Array<objeto1> = [];
-
-  agregarFecha: number  = 0;
+  lista1:Array<objeto1> = [];
   lista2:Array<objeto1> = [];
   checkk = false;
+  agregarFecha: number  = 0;
+
+  saveList:any = [];
 
   @Output() carga = new EventEmitter();
 
@@ -25,7 +26,6 @@ export class StockComponent implements OnInit {
   }
 
   AgregarProducto(){
-
       this.lista1.push({producto:this.agregarProducto, fecha:this.agregarFecha, eliminar:false, id:0})
       this.agregarProducto = "";
       console.log(this.lista1)
@@ -44,8 +44,25 @@ export class StockComponent implements OnInit {
 
   }
 
-  cosa(){
-    this.carga.emit(this.lista1);
+  guardarStock(){
+    if(this.saveList.length === 0){
+      this.saveList.push(this.lista1)
+      this.saveList.push(this.lista2)
+      alert("Guardado")
+      return console.log(this.saveList)
+    }
+    if(this.saveList.length === 2){
+      this.saveList.pop(this.lista1)
+      this.saveList.pop(this.lista2)
+      this.saveList.push(this.lista1)
+      this.saveList.push(this.lista2)
+      alert("Guardado")
+      return console.log(this.saveList)
+    }
+    else{
+      return "algo malo sucedió"
+    }
+
   }
 
 }
