@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit {
   dia:number = 1;
   activar2 = false;
   activarInfo = false;
+  activarMovile = false;
 
   listaStocks: Array<objeto1> = [
     {
@@ -109,6 +110,7 @@ export class HomeComponent implements OnInit {
   pageSizeOptions = [5]
   array:Array<any> = [5]
 
+  array2:Array<any> = [5]
   pageSizeOptions2 = [1]
 
 
@@ -134,6 +136,11 @@ export class HomeComponent implements OnInit {
     this.activarInfo = false
     this.activar2 = valor
 
+  }
+
+  showStocksMovile(valor: boolean){
+    this.activarInfo = false
+    this.activarMovile = valor
   }
 
   showInformacion(valor: boolean){

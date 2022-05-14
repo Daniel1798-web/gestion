@@ -10,9 +10,11 @@ export class HederComponent implements OnInit {
   constructor() { }
   activeMenu = false;
   stocksGuardados:boolean = false;
-  info:boolean = false
+  stocksGuardadosMovile:boolean = false;
+  info:boolean = false;
 
   @Output() activarGuardados = new EventEmitter<boolean>();
+  @Output() activarGuardadosMobile = new EventEmitter<boolean>();
   @Output() activarInformacion = new EventEmitter<boolean>();
 
 
@@ -28,6 +30,13 @@ export class HederComponent implements OnInit {
     this.activarGuardados.emit(this.stocksGuardados)
     console.log("activa")
 
+  }
+
+  guardadosMovile(){
+    this.info = false
+    this.stocksGuardadosMovile = !this.stocksGuardadosMovile
+    this.activarGuardadosMobile.emit(this.stocksGuardadosMovile)
+    console.log("activa")
   }
 
   informacion(){

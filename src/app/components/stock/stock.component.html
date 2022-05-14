@@ -1,22 +1,25 @@
 
-<div class="dady">
+<div class="dady"  >
 
   <div  class="cabecera" >
 
-    <nav>
-   <a href="/home" class="linkRegreso"><button class="regreso"><img class="casita" src=""></button></a>
-    </nav>
+
+<div class="cabecera2">
+  <nav>
+    <a href="/home" class="regreso"><img class="casita" src="../../../assets/png/casa.png"></a>
+  </nav>
 
      <input type="text" class="texto"  [(ngModel)]="agregarProducto"  placeholder="Añadir Producto" maxlength="20"/>
-     <input type="date"  class="texto2" [(ngModel)]="agregarFecha" placeholder="Añadir fecha"   v-model="value2"/>
+     <input type="date"   class="texto2" [(ngModel)]="agregarFecha" placeholder="Añadir fecha"
+     (keyup.enter)="AgregarProducto()" (keyup.enter)="AgregarProducto2()"/>
 
 
+      <button  class="añadirL"  (click)="AgregarProducto()">Añadir a Lista 1</button>
+      <button  class="añadirC" (click)="AgregarProducto2()">Añadir a Lista 2</button>
+      <button  class="borrar" (click)="eliminar()" >Borrar</button>
 
-     <button  class="añadirL" (click)="AgregarProducto()">Añadir a Lista 1</button>
-     <button  class="añadirC" (click)="AgregarProducto2()">Añadir a Lista 2</button>
-     <button  class="borrar" (click)="eliminar()" >Borrar</button>
 
-
+    </div>
          <!--PhoneVersion -->
 
        <div class="textoPhoned">
@@ -66,3 +69,8 @@
 
 
  </div>
+
+</div>
+<div>
+  <button>click</button>
+</div>
