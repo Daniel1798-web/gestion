@@ -1,6 +1,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 html,
 body {
@@ -11,7 +12,7 @@ html, body {
   height: 100%;
   overflow-x:hidden;
   overflow-y:hidden; }
-  
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .mat-paginator-page-size {

@@ -97,4 +97,21 @@
   .hide-mobile {
     display: block;
   }
+
+  .divHide{
+    width: 100%;
+    justify-content: space-around;
+    background-color: beige;
+  }
+
+  .ulDad{
+    width:100%;
+  }
+
+  .ulThreeActions{
+    display: flex;
+    justify-content: space-around;
+  }
+
+
 }
