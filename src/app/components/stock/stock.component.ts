@@ -19,7 +19,7 @@ export class StockComponent implements OnInit {
   agregarFecha: number  = 0;
 
   saveList:any = [];
-
+  @Output() sendData = new EventEmitter();
   @Output() carga = new EventEmitter();
 
   ngOnInit(): void {
@@ -49,7 +49,8 @@ export class StockComponent implements OnInit {
       this.saveList.push(this.lista1)
       this.saveList.push(this.lista2)
       alert("Guardado")
-      return console.log(this.saveList)
+      console.log(this.saveList)
+      return this.sendData.emit(this.saveList)
     }
     if(this.saveList.length === 2){
       this.saveList.pop(this.lista1)
@@ -57,7 +58,9 @@ export class StockComponent implements OnInit {
       this.saveList.push(this.lista1)
       this.saveList.push(this.lista2)
       alert("Guardado")
-      return console.log(this.saveList)
+      console.log(this.saveList)
+      return this.sendData.emit(this.saveList)
+
     }
     else{
       return "algo malo sucedió"

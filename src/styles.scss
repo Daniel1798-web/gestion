@@ -20,3 +20,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   align-items: baseline;
   margin-right: 8px;
 }
+
+.mat-paginator-range-label
+{
+  display: none;
+}
+
+
+.mat-paginator-page-size
+{
+visibility: hidden;
+}
+
+.mat-paginator-icon
+{
+  width: 500px;
+}

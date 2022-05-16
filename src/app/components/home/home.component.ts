@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
     this._MatPaginatorIntl.previousPageLabel = 'your custom text 5';
   }
 
+  datosStockSaves:any = [];
   identificador:number = 0;
   dia:number = 1;
   activar2 = false;
@@ -160,5 +161,8 @@ export class HomeComponent implements OnInit {
     this.page_number = e.pageIndex + 1
   }
 
+  reciveData(valor:any){
+      this.datosStockSaves = valor
+  }
 
 }

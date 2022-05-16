@@ -1,3 +1,7 @@
+
+
+  {{datosStockSaves}}
+
 <app-heder
 (activarInformacion)="showInformacion($event)"
 (activarGuardados)="showStockGuardados($event)"
@@ -9,7 +13,6 @@
   <div class="elemento1" *ngIf="activarMovile " >
     <div class="titulo"> <h1>Stocks guardados</h1> </div>
     <mat-paginator
-
     style-paginator showFirstLastButtons
     class="paginatorMobile"
     [length]="listaStocks.length"
@@ -41,8 +44,8 @@
     [pageSizeOptions]="pageSizeOptions"
     (page)="handlePage($event)"
     aria-label="Select page">
+    {{listaStocks.length}}
 </mat-paginator>
-
 <ul class="ulPaginator">
   <li class="liPaginator" *ngFor="let l of listaStocks | paginator:page_size:page_number">
     <a class="aPaginator" href="/"><p >{{l.id}}</p></a>
@@ -75,7 +78,7 @@
   </div>
 
 
-
+  <app-stock class="nada" (sendData)="reciveData($event)"></app-stock>
 
 </div>
 
