@@ -26,6 +26,8 @@ export class HomeComponent implements OnInit {
     this._MatPaginatorIntl.nextPageLabel = 'your custom text 5';
     this._MatPaginatorIntl.previousPageLabel = 'your custom text 5';
   }
+  showHome = true;
+  crearStock = false;
 
   datosStockSaves:any = [];
   identificador:number = 0;
@@ -128,8 +130,14 @@ export class HomeComponent implements OnInit {
 
 
 
-  carga1(product: Array<object>) {
-    console.log(product)
+  showStock(valor: boolean) {
+    this.showHome = false
+    this.crearStock = true
+  }
+
+  volver(valor : boolean){
+    this.crearStock = false
+    this.showHome = true
   }
 
 
@@ -162,7 +170,7 @@ export class HomeComponent implements OnInit {
   }
 
   reciveData(valor:any){
-      this.datosStockSaves = valor
+      this.datosStockSaves.push(valor)
   }
 
 }

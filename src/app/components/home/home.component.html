@@ -1,11 +1,11 @@
 
 
-  {{datosStockSaves}}
-
+<div *ngIf="showHome">
 <app-heder
 (activarInformacion)="showInformacion($event)"
 (activarGuardados)="showStockGuardados($event)"
 (activarGuardadosMobile)="showStocksMovile($event)"
+(loadStockP)="showStock($event)"
 ></app-heder>
 <div class="padre">
 
@@ -23,7 +23,7 @@
 </mat-paginator>
 
 <ul class="ulPaginator">
-  <li class="liPaginator" *ngFor="let l of listaStocks | paginator:page_size:page_number">
+  <li class="liPaginator" *ngFor="let l of datosStockSaves | paginator:page_size:page_number">
     <a class="aPaginator" href="/"><p >{{l.id}}</p></a>
     </li>
   </ul>
@@ -36,6 +36,7 @@
 <!--Mostrar Stocks Guardados-->
   <div class="elemento1" *ngIf="activar2 " >
     <div class="titulo"> <h1>Stocks guardados</h1> </div>
+    <h2 *ngIf="datosStockSaves.length === 0">No existen stocks almacenados</h2>
     <mat-paginator
     style-paginator showFirstLastButtons
     class="paginator"
@@ -47,8 +48,8 @@
     {{listaStocks.length}}
 </mat-paginator>
 <ul class="ulPaginator">
-  <li class="liPaginator" *ngFor="let l of listaStocks | paginator:page_size:page_number">
-    <a class="aPaginator" href="/"><p >{{l.id}}</p></a>
+  <li class="liPaginator" *ngFor="let l of datosStockSaves | paginator:page_size:page_number">
+    <a class="aPaginator" href="/"><p >{{l}}</p></a>
     </li>
   </ul>
 </div>
@@ -77,10 +78,15 @@
 
   </div>
 
-
-  <app-stock class="nada" (sendData)="reciveData($event)"></app-stock>
-
+  <button></button>
 </div>
+</div>
+  <app-stock class="nada" *ngIf="crearStock"
+  (sendData)="reciveData($event)"
+  (back)="volver($event)"
+  ></app-stock>
+
+
 
 
 

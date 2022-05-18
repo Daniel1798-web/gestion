@@ -10,7 +10,8 @@ import {objeto1} from '../../model/objeto1.model'
 export class StockComponent implements OnInit {
 
   constructor() {}
-
+  stock = 0;
+  home = false;
 
   agregarProducto: string | number = ""
   lista1:Array<objeto1> = [];
@@ -21,6 +22,7 @@ export class StockComponent implements OnInit {
   saveList:any = [];
   @Output() sendData = new EventEmitter();
   @Output() carga = new EventEmitter();
+  @Output() back = new EventEmitter();
 
   ngOnInit(): void {
   }
@@ -50,7 +52,7 @@ export class StockComponent implements OnInit {
       this.saveList.push(this.lista2)
       alert("Guardado")
       console.log(this.saveList)
-      return this.sendData.emit(this.saveList)
+      return  localStorage.setItem('list',this.saveList)
     }
     if(this.saveList.length === 2){
       this.saveList.pop(this.lista1)
@@ -59,13 +61,25 @@ export class StockComponent implements OnInit {
       this.saveList.push(this.lista2)
       alert("Guardado")
       console.log(this.saveList)
-      return this.sendData.emit(this.saveList)
+      return localStorage.setItem('list',this.saveList)
 
     }
     else{
       return "algo malo sucedió"
     }
 
+  }
+
+  stockAdd(){
+    this.guardarStock()
+    this.stock++
+    this.sendData.emit(this.stock)
+  }
+
+
+  backHome(){
+      this.home = true
+    return  this.back.emit(this.home)
   }
 
 }

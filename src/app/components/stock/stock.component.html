@@ -6,7 +6,7 @@
 
 <div class="cabecera2">
   <nav>
-    <a href="/home" class="regreso"><img class="casita" src="../../../assets/png/casa.png"></a>
+    <a (click)="backHome()" class="regreso"><img class="casita" src="../../../assets/png/casa.png"></a>
   </nav>
 
      <input type="text" class="texto"  [(ngModel)]="agregarProducto"  placeholder="Añadir Producto" maxlength="20"/>
@@ -73,7 +73,7 @@
 </div>
 
  <div class="saveDiv">
-  <a class="saveButton" (click)="guardarStock()"><img src="../../../assets/png/saveDisk.png"></a>
+  <a class="saveButton" (click)="stockAdd()"><img src="../../../assets/png/saveDisk.png"></a>
   <p>Guardar Stock</p>
   </div>
 </div>
