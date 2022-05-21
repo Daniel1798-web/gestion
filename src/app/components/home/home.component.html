@@ -7,6 +7,9 @@
 (activarGuardadosMobile)="showStocksMovile($event)"
 (loadStockP)="showStock($event)"
 ></app-heder>
+
+
+
 <div class="padre">
 
   <!--Paginator Mobile-->
@@ -21,7 +24,6 @@
     (page)="handlePage($event)"
     aria-label="Select page">
 </mat-paginator>
-
 <ul class="ulPaginator">
   <li class="liPaginator" *ngFor="let l of datosStockSaves | paginator:page_size:page_number">
     <a class="aPaginator" href="/"><p >{{l.id}}</p></a>
@@ -33,10 +35,13 @@
 
 <!--Fin Paginator Mobile-->
 
+
+
 <!--Mostrar Stocks Guardados-->
   <div class="elemento1" *ngIf="activar2 " >
     <div class="titulo"> <h1>Stocks guardados</h1> </div>
-    <h2 *ngIf="datosStockSaves.length === 0">No existen stocks almacenados</h2>
+    <h2 class="titulo2" *ngIf="datosStockSaves.length === 0">No existen stocks almacenados</h2>
+
     <mat-paginator
     style-paginator showFirstLastButtons
     class="paginator"
@@ -45,13 +50,18 @@
     [pageSizeOptions]="pageSizeOptions"
     (page)="handlePage($event)"
     aria-label="Select page">
-    {{listaStocks.length}}
 </mat-paginator>
-<ul class="ulPaginator">
+<div class="botonesPaginator">
+  <a><img *ngIf="page_number > 1"  class="botonAtras" src="../../../assets/png/flecha.png" (click)="volverPagina()"></a>
+<ul class="ulPaginator" >
+
   <li class="liPaginator" *ngFor="let l of datosStockSaves | paginator:page_size:page_number">
-    <a class="aPaginator" href="/"><p >{{l}}</p></a>
+    <a class="aPaginator"><p>{{l}}</p><img class="descarga" src="../../../assets/png/descarga.png"></a>
+
     </li>
-  </ul>
+</ul>
+<a *ngIf="page_size < page_number"><img  class="botonAvance" src="../../../assets/png/flecha2.png" (click)="pasarPagina()"></a>
+ </div>
 </div>
 <!--fin-->
 
@@ -63,7 +73,6 @@
     <h2 class="h2Info">{{helpText}}</h2>
 
 <div class="inforCompany">
-
     <div class="inforNumber">
       <a target="_blank" href="https://wa.me/543516838934"><img class="inforImg" src="../../../assets/png/telefono.png"></a>
       <a target="_blank" href="mailto:danrieloto@gmail.com"><img class="inforImg" src="../../../assets/png/email.png"></a>
@@ -78,7 +87,6 @@
 
   </div>
 
-  <button></button>
 </div>
 </div>
   <app-stock class="nada" *ngIf="crearStock"

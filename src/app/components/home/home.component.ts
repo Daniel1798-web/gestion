@@ -25,9 +25,12 @@ export class HomeComponent implements OnInit {
     this._MatPaginatorIntl.lastPageLabel = 'your custom text 4';
     this._MatPaginatorIntl.nextPageLabel = 'your custom text 5';
     this._MatPaginatorIntl.previousPageLabel = 'your custom text 5';
+    this.largo()
   }
   showHome = true;
   crearStock = false;
+  cierto = false;
+  cierto2 = false;
 
   datosStockSaves:any = [];
   identificador:number = 0;
@@ -169,8 +172,37 @@ export class HomeComponent implements OnInit {
     this.page_number = e.pageIndex + 1
   }
 
+  pasarPagina(){
+    if(this.datosStockSaves < 6){
+      return null
+    }
+    else{
+
+      return this.page_number = this.page_number +1
+    }
+  }
+  volverPagina(){
+    if(this.page_number > 1){
+      return this.page_number = this.page_number - 1
+    }else{
+      return null
+    }
+  }
+
   reciveData(valor:any){
       this.datosStockSaves.push(valor)
+  }
+
+  largo(){
+    if(this.datosStockSaves > 3){
+      this.cierto2 = false
+      return this.cierto = true
+    }
+    else{
+      console.log("largo!")
+      return this.cierto2 = true
+    }
+
   }
 
 }

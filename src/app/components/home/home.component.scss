@@ -7,9 +7,14 @@
 
 .titulo{
   margin-top:200px ;
-
   text-align: center;
 }
+
+
+.titulo2{
+  text-align: center;
+}
+
 
 .elemento1{
 
@@ -37,8 +42,52 @@
   flex-direction: row;
   justify-content: space-around;
   list-style: none;
-
 }
+
+.ulPaginator2{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+  background-color: blue;
+}
+
+.botonesPaginator{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  list-style: none;
+}
+
+.botonAtras{
+  width: 64px;
+  cursor: pointer;
+  position: fixed;
+}
+
+.botonAtras:hover{
+width: 68px;
+}
+
+.botonAtras:active{
+  width: 60px;
+}
+
+.botonAvance{
+  position: fixed;
+  width: 64px;
+  cursor: pointer;
+}
+
+.botonAvance:hover{
+width: 68px;
+}
+
+.botonAvance:active{
+  width: 60px;
+}
+
 
 
 
@@ -59,6 +108,12 @@
   .aPaginator{
     text-decoration: none;
     width: 100%;
+  }
+
+  .descarga{
+    width: 24px;
+    height: 24px;
+    margin-bottom: 50px;
   }
 
 p{

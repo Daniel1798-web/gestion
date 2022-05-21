@@ -18,7 +18,7 @@ import {LogComponent} from './components/log/log.component'
 import {RegisterComponent} from './components/register/register.component'
 
 const routes: Routes = [
-  { path: '', component: LogComponent },
+  { path: '', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: HomeComponent},
   { path: 'stock', component: StockComponent }
