@@ -23,15 +23,15 @@
          <!--PhoneVersion -->
 
        <div class="textoPhoned">
-         <input maxlength="18" type="text" class="textoPhone"  placeholder="Añadir Producto" v-model="value"/>
+         <input maxlength="18" type="text" class="textoPhone"  placeholder="Añadir Producto" [(ngModel)]="agregarProducto"/>
          <br />
-         <input type="text"  class="textoPhone2" placeholder="Añadir fecha" v-model="value2"/>
+         <input type="date"  class="textoPhone2" placeholder="Añadir fecha" [(ngModel)]="agregarFecha"/>
        </div>
 
      <div class="botonesPhone">
-       <button  class="añadirL2" v-on:click="añadir()">Añadir a Lista 1</button>
-       <button  class="añadirC2" v-on:click="añadir2()">Añadir a Lista 2</button>
-       <button  class="borrar2" v-on:click="eliminar()" >Borrar</button>
+       <button  class="añadirL2" (click)="AgregarProducto()">Añadir a Lista 1</button>
+       <button  class="añadirC2" (click)="AgregarProducto2()">Añadir a Lista 2</button>
+       <button  class="borrar2" (click)="eliminar()" >Borrar</button>
      </div>
 
  </div>
@@ -48,10 +48,10 @@
 
  <div class="tableroListaUno">
      <ul class="ulproduct" >
-      <h2 >Lista1</h2>
+      <h2 class="h2Tabla">Lista1</h2>
 
  <li class="product" *ngFor="let p of lista1" >
-   <p class="productText">{{p.producto}} {{p.fecha| date:"dd/MM/yyyy"}}<input type="checkbox" class="check" [(ngModel)]="p.eliminar"></p>
+  <p class="productText"> {{p.producto}} {{p.fecha| date:"dd/MM/yyyy"}}<input type="checkbox" class="check" [(ngModel)]="p.eliminar"></p>
  </li>
 </ul>
  </div>
@@ -60,7 +60,7 @@
 
  <div class="tableroListaDos">
    <ul class="ulproduct" >
-    <h2 >Lista2</h2>
+    <h2 class="h2Tabla">Lista2</h2>
 
      <li  class="product" *ngFor="let p of lista2" >
      <p class="productText">{{p.producto}} {{p.fecha | date:"dd/MM/yyyy"}}<input type="checkbox" class="check"  [(ngModel)]="p.eliminar">
@@ -73,7 +73,7 @@
 </div>
 
  <div class="saveDiv">
-  <a class="saveButton" (click)="stockAdd()"><img src="../../../assets/png/saveDisk.png"></a>
+  <a class="saveButton" (click)="stockAdd()"><img class="imgSave" src="../../../assets/png/saveDisk.png"></a>
   <p>Guardar Stock</p>
   </div>
 </div>

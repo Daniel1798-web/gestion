@@ -1,3 +1,5 @@
+
+
 .show-mobile {
   display: block;
   box-shadow: 0px 2px 5px rgb(black, .2);
@@ -87,7 +89,27 @@
   .hide-mobile {
     display: block;
   }
+
+  .divHide{
+    width: 100%;
+    justify-content: space-around;
+    background-color: beige;
+  }
+
+  .ulDad{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .ulThreeActions{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
 }
+
 
 /* Large and up */
 @media screen and (min-width: 64em) {

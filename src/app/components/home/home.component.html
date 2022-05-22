@@ -38,6 +38,7 @@
 
 
 <!--Mostrar Stocks Guardados-->
+
   <div class="elemento1" *ngIf="activar2 " >
     <div class="titulo"> <h1>Stocks guardados</h1> </div>
     <h2 class="titulo2" *ngIf="datosStockSaves.length === 0">No existen stocks almacenados</h2>
@@ -47,12 +48,13 @@
     class="paginator"
     [length]="listaStocks.length"
     [pageSize]="page_size"
+    [pageIndex]="page_index"
     [pageSizeOptions]="pageSizeOptions"
     (page)="handlePage($event)"
     aria-label="Select page">
 </mat-paginator>
 <div class="botonesPaginator">
-  <a><img *ngIf="page_number > 1"  class="botonAtras" src="../../../assets/png/flecha.png" (click)="volverPagina()"></a>
+  <a><img *ngIf="page_number > 1"   class="botonAtras" src="../../../assets/png/flecha.png" (click)="volverPagina()"></a>
 <ul class="ulPaginator" >
 
   <li class="liPaginator" *ngFor="let l of datosStockSaves | paginator:page_size:page_number">
@@ -60,7 +62,7 @@
 
     </li>
 </ul>
-<a *ngIf="page_size < page_number"><img  class="botonAvance" src="../../../assets/png/flecha2.png" (click)="pasarPagina()"></a>
+<a *ngIf="datosStockSaves.length > 6" ><img  class="botonAvance" src="../../../assets/png/flecha2.png" (click)="pasarPagina()"></a>
  </div>
 </div>
 <!--fin-->

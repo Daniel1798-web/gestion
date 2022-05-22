@@ -110,11 +110,13 @@ export class HomeComponent implements OnInit {
   ];
   stocksMostrar:any = []
 
-
-  page_size:number = 0;
+  page_index:number = 0;
+  page_size:number = 5;
   page_number:number = 1;
   pageSizeOptions = [5]
   array:Array<any> = [5]
+
+  pageEvent !: PageEvent
 
   array2:Array<any> = [5]
   pageSizeOptions2 = [1]
@@ -173,7 +175,7 @@ export class HomeComponent implements OnInit {
   }
 
   pasarPagina(){
-    if(this.datosStockSaves < 6){
+    if(this.page_size < this.page_number){
       return null
     }
     else{
