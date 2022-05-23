@@ -1,5 +1,10 @@
+
+
+
+
 *{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 
@@ -328,10 +333,10 @@ background-color: rgb(0,119,158);
   height: 250px;
   list-style: none;
   padding: 0%;
+  margin: 0%;
 }
 
 .h2Tabla{
-  margin: 0%;
   height: 20px;
   text-align: center;
 }
@@ -339,12 +344,35 @@ background-color: rgb(0,119,158);
 .product{
   margin: 5px;
   width: 100%;
+  margin: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+
 }
 
 .productText{
 float: left;
 width: 100%;
 font-size: 15px;
+white-space: initial;
+padding: 2px 5px;
+}
+
+
+.aText{
+  color: blue;
+}
+
+.productText2{float: left;
+  width: 100%;
+  font-size: 15px;
+  box-shadow: 1px 1px 0px 0px grey;
+  white-space: initial;
+  padding: 2px 5px;}
+
+
+.product:hover{
+word-break: break-all;
 }
 
 
@@ -383,6 +411,32 @@ width: 100px;
 .saveButton:hover{
 cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -565,6 +619,12 @@ box-shadow: 1px 1px 1px 1px rgb(68, 68, 68);
 
 }
 
+.h2Tabla{
+    height: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 
 
 
@@ -669,6 +729,7 @@ box-shadow: 1px 1px 1px 1px rgb(68, 68, 68);
     width: 100%;
     height: 500px;
     list-style: none;
+    margin: 2px;
 }
 
 .product{
@@ -680,7 +741,10 @@ float: left;
 width: 100%;
 font-size: 25px;
 padding: 5px;
+margin: 2px;
 }
+
+
 
 
 
@@ -719,6 +783,34 @@ padding: 5px;
   cursor: pointer;
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

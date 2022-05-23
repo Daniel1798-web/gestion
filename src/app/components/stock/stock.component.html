@@ -51,8 +51,9 @@
       <h2 class="h2Tabla">Lista1</h2>
 
  <li class="product" *ngFor="let p of lista1" >
-  <p class="productText"> {{p.producto}} {{p.fecha| date:"dd/MM/yyyy"}}<input type="checkbox" class="check" [(ngModel)]="p.eliminar"></p>
- </li>
+  <p class="productText"> {{p.producto}}   </p>
+  <p class="productText2">{{p.fecha| date:"dd/MM/yyyy"}}  <input type="checkbox" class="check" [(ngModel)]="p.eliminar"></p>
+</li>
 </ul>
  </div>
 
@@ -63,7 +64,8 @@
     <h2 class="h2Tabla">Lista2</h2>
 
      <li  class="product" *ngFor="let p of lista2" >
-     <p class="productText">{{p.producto}} {{p.fecha | date:"dd/MM/yyyy"}}<input type="checkbox" class="check"  [(ngModel)]="p.eliminar">
+      <p class="productText"> {{p.producto}}   </p>
+      <p class="productText2">{{p.fecha| date:"dd/MM/yyyy"}}  <input type="checkbox" class="check" [(ngModel)]="p.eliminar"></p>
      </li>
 
  </ul>
