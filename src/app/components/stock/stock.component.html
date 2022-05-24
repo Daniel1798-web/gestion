@@ -9,7 +9,7 @@
     <a (click)="backHome()" class="regreso"><img class="casita" src="../../../assets/png/casa.png"></a>
   </nav>
 
-     <input type="text" class="texto"  [(ngModel)]="agregarProducto"  placeholder="Añadir Producto" maxlength="20"/>
+     <input type="text" class="texto"  [(ngModel)]="agregarProducto"  placeholder="Añadir Producto" maxlength="40"/>
      <input type="date"   class="texto2" [(ngModel)]="agregarFecha" placeholder="Añadir fecha"
      (keyup.enter)="AgregarProducto()" (keyup.enter)="AgregarProducto2()"/>
 
@@ -23,7 +23,10 @@
          <!--PhoneVersion -->
 
        <div class="textoPhoned">
-         <input maxlength="18" type="text" class="textoPhone"  placeholder="Añadir Producto" [(ngModel)]="agregarProducto"/>
+        <nav class="navHome">
+          <a (click)="backHome()" class="regreso"><img class="casita" src="../../../assets/png/casa.png"></a>
+        </nav>
+         <input maxlength="40" type="text" class="textoPhone"  placeholder="Añadir Producto" [(ngModel)]="agregarProducto"/>
          <br />
          <input type="date"  class="textoPhone2" placeholder="Añadir fecha" [(ngModel)]="agregarFecha"/>
        </div>

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { LogComponent } from './components/log/log.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaginatorPipe } from './pipes/paginator.pipe';
+
+import  {NgbModule}  from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -31,8 +35,8 @@ import { PaginatorPipe } from './pipes/paginator.pipe';
     HttpClientModule,
     MatPaginatorModule,
     BrowserAnimationsModule,
-    
-
+    IvyCarouselModule,
+    NgbModule
   ],
   providers: [ MatPaginatorIntl],
   bootstrap: [AppComponent]
