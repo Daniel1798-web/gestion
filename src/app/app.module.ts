@@ -36,7 +36,9 @@ import  {NgbModule}  from '@ng-bootstrap/ng-bootstrap';
     MatPaginatorModule,
     BrowserAnimationsModule,
     IvyCarouselModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
+
   ],
   providers: [ MatPaginatorIntl],
   bootstrap: [AppComponent]

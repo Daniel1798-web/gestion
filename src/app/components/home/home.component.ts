@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 import { objeto1 } from '../../model/objeto1.model'
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
-
 
 
 @Component({
@@ -15,8 +15,13 @@ export class HomeComponent implements OnInit {
 
 
   constructor(
-    public _MatPaginatorIntl: MatPaginatorIntl
-  ) {}
+    public _MatPaginatorIntl: MatPaginatorIntl,
+    config: NgbCarouselConfig
+  ) {
+    config.interval = 2000;
+    config.keyboard = true;
+    config.pauseOnHover = true;
+  }
 
   ngOnInit():void {
     this._MatPaginatorIntl.itemsPerPageLabel = 'your custom text 1';
@@ -31,6 +36,15 @@ export class HomeComponent implements OnInit {
   crearStock = false;
   cierto = false;
   cierto2 = false;
+
+
+  images = [
+    {title: 'First Slide', short: 'First Slide Short', src: "https://picsum.photos/id/700/900/500"},
+    {title: 'Second Slide', short: 'Second Slide Short', src: "https://picsum.photos/id/1011/900/500"},
+    {title: 'Third Slide', short: 'Third Slide Short', src: "https://picsum.photos/id/984/900/500"}
+  ];
+
+
 
   datosStockSaves:any = [];
   identificador:number = 0;

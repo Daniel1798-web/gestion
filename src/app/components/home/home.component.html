@@ -86,6 +86,20 @@
  </div>
   </div>
 
+  <div class="container-fluid">
+    <ngb-carousel>
+      <ng-template ngbSlide *ngFor="let image of images">
+        <div class="wrapper">
+          <img [src]="image.src" alt="Random first slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>{{ image.title }}</h3>
+          <p>{{ image.short }}</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+
+    </div>
 
 </div>
 
@@ -99,26 +113,9 @@
 
 
 
-  <ngb-carousel>
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img src="assets/img-01.jpeg" alt="Angular Carousel 1">
-      </div>
-      <div class="carousel-caption">
-        <h3>Title Goes Here</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img src="assets/img-02.jpeg" alt="Angular Carousel 2">
-      </div>
-      <div class="carousel-caption">
-        <h3>Title Goes Here</h3>
-        <p>Consectetur tortor volutpat pretium.</p>
-      </div>
-    </ng-template>
-  </ngb-carousel>
+
+
+
 
 
 
