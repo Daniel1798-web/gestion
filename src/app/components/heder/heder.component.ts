@@ -8,12 +8,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class HederComponent implements OnInit {
 
   constructor() { }
+  cierralo = true
   activeMenu = false;
   loadStock = false;
   stocksGuardados:boolean = false;
   stocksGuardadosMovile:boolean = false;
   info:boolean = false;
 
+  @Output() sideMenu = new EventEmitter<boolean>();
   @Output() loadStockP= new EventEmitter<boolean>();
   @Output() activarGuardados = new EventEmitter<boolean>();
   @Output() activarGuardadosMobile = new EventEmitter<boolean>();
@@ -24,6 +26,8 @@ export class HederComponent implements OnInit {
   }
   toggleMenu(){
     this.activeMenu = !this.activeMenu
+    this.cierralo = !this.cierralo
+    this.sideMenu.emit(this.cierralo)
   }
 
   guardados(){

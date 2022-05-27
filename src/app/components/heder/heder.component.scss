@@ -1,18 +1,21 @@
 
+*{
+  box-shadow: 20px 2px 5px rgb#686868;
 
+}
+
+.lia{
+  margin: auto;
+}
 .show-mobile {
   display: block;
-  box-shadow: 0px 2px 5px rgb(black, .2);
-  > div {
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    button {
-      border: 0;
-      background: transparent;
-    }
-  }
+
+
+}
+
+.divHide{
+  box-shadow:  2px 2px 2px 0px #686868;
+
 }
 
 .side-menu{
@@ -30,9 +33,17 @@
   transition: all ease-out .5s;
   &.active{
     transform: translateX(0);
+    transition: all ease-out .2s;
 
   }
 
+}
+
+.logo {
+  margin-right: 1em;
+  text-decoration: none !important;
+  background-image: none !important;
+  border: none !important;
 }
 
 .xMobile{
@@ -41,22 +52,27 @@
   padding: 10px;
 }
 
+.enlace{
+  width: 50px;
+  font-size: 25px;
+  background-image: url(../../../assets/images/metal.jpg);
+  padding: 10px;
+  border: 2px solid rgba(68, 20, 20, 0.822);
+}
+
 .enlace:hover{
   cursor: pointer;
   }
 
 .hide-mobile {
   display: none;
-  box-shadow: 0px 2px 5px rgb(black, .2);
   > div {
     padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .logo {
-    margin-right: 1em;
-  }
+
   nav {
     display: flex;
     align-items: center;
@@ -93,7 +109,9 @@
   .divHide{
     width: 100%;
     justify-content: space-around;
-    background-color: beige;
+    background-color:#9e9e9e;
+    box-shadow: 0px 2px 5px rgb#686868;
+
   }
 
   .ulDad{
@@ -118,12 +136,15 @@
   }
   .hide-mobile {
     display: block;
+
   }
 
   .divHide{
     width: 100%;
     justify-content: space-around;
-    background-color: beige;
+    background-color:#9e9e9e;
+    box-shadow: 0px 2px 5px rgb#686868;
+
   }
 
   .ulDad{
@@ -139,6 +160,30 @@
     list-style: none;
   }
 
+  .enlace{
+    width: 50px;
+    font-size: 25px;
+    background-image: url(../../../assets/images/metal.jpg);
+    padding: 10px;
+    border: 2px solid rgba(68, 20, 20, 0.822);
+    position:relative;
+
+  }
+
+  .enlace:active{
+      width: 40px;
+    padding: 9px;
+      box-shadow: 1px 1px 1px rgba(75, 33, 33, 0.822);
+
+
+  }
+  .enlace:hover{
+    width: 50px;
+    box-shadow: 2px 2px 2px rgba(75, 33, 33, 0.822);
+  }
+
+
+  @keyframes cosaa{0%{font-size: 25px;} 50%{font-size: 23px;} 100%{font-size: 25px;}}
 
 }
 
@@ -149,7 +194,7 @@
 
 .show-mobile {
   display: block;
-  box-shadow: 0px 2px 5px rgb(black, .2);
+  box-shadow: 0px 2px 5px rgb(black, .5);
   > div {
     padding: 1em;
     display: flex;

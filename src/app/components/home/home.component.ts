@@ -39,13 +39,13 @@ export class HomeComponent implements OnInit {
 
 
   images = [
-    {title: 'First Slide', short: 'First Slide Short', src: "https://picsum.photos/id/700/900/500"},
-    {title: 'Second Slide', short: 'Second Slide Short', src: "https://picsum.photos/id/1011/900/500"},
-    {title: 'Third Slide', short: 'Third Slide Short', src: "https://picsum.photos/id/984/900/500"}
+    {title: 'First Slide', short: 'First Slide Short', src: "../../../assets/images/doyouwork.jpg"},
+    {title: 'Second Slide', short: 'Second Slide Short', src: "../../../assets/images/besafe.jpg"},
+    {title: 'Third Slide', short: 'Third Slide Short', src: "../../../assets/images/work.jpg"}
   ];
 
 
-
+  cerrarCarousel = true;
   datosStockSaves:any = [];
   identificador:number = 0;
   dia:number = 1;
@@ -220,5 +220,19 @@ export class HomeComponent implements OnInit {
     }
 
   }
+
+  closeCarousel(e: boolean){
+    if(e === false){  setTimeout(() => {
+      this.cerrarCarousel = e
+
+    }, 0);}
+     if(e === true){
+     setTimeout(() => {
+        this.cerrarCarousel = e
+
+      }, 1000);
+    }
+
+    }
 
 }

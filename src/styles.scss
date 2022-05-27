@@ -3,6 +3,9 @@
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+
+
 html,
 body {
   background: #ecf0f3;
@@ -14,6 +17,17 @@ html, body {
   overflow-y:hidden; }
 
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+a{
+  text-decoration: none !important;
+  color: black !important;
+
+}
+
+.carousel-control-next, .carousel-control-prev{
+  visibility: hidden;
+}
 
 .mat-paginator-page-size {
   display: none;
@@ -56,6 +70,7 @@ visibility: hidden;
 @import '~bootstrap/scss/bootstrap';
 
 
-a{
-  text-decoration: none;
+
+.carousel-indicators{
+  display: none !important;
 }

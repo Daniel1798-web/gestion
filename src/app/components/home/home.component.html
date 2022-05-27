@@ -2,9 +2,11 @@
 
 <div *ngIf="showHome">
 <app-heder
+class="hedersito"
 (activarInformacion)="showInformacion($event)"
 (activarGuardados)="showStockGuardados($event)"
 (activarGuardadosMobile)="showStocksMovile($event)"
+(sideMenu)="closeCarousel($event)"
 (loadStockP)="showStock($event)"
 ></app-heder>
 
@@ -12,9 +14,25 @@
 
 <div class="padre">
 
+
+  <div class="container-fluid" *ngIf="cerrarCarousel">
+    <ngb-carousel>
+      <ng-template ngbSlide *ngFor="let image of images">
+        <div class="wrapper">
+          <img class="imagenesCarousel" [src]="image.src" alt="Random first slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>{{ image.title }}</h3>
+          <p>{{ image.short }}</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+
+
+
   <!--Paginator Mobile-->
   <div class="elemento1" *ngIf="activarMovile " >
-    <div class="titulo"> <h1>Stocks guardados</h1> </div>
+    <div class="titulo"> <h1 class="h1Titulo">Stocks guardados</h1> </div>
     <mat-paginator
     style-paginator showFirstLastButtons
     class="paginatorMobile"
@@ -40,7 +58,7 @@
 <!--Mostrar Stocks Guardados-->
 
   <div class="elemento1" *ngIf="activar2 " >
-    <div class="titulo"> <h1>Stocks guardados</h1> </div>
+    <div class="titulo"> <h1 class="h1Titulo">Stocks guardados</h1> </div>
     <h2 class="titulo2" *ngIf="datosStockSaves.length === 0">No existen stocks almacenados</h2>
 
     <mat-paginator
@@ -53,6 +71,7 @@
     (page)="handlePage($event)"
     aria-label="Select page">
 </mat-paginator>
+
 <div class="botonesPaginator">
   <a><img *ngIf="page_number > 1"   class="botonAtras" src="../../../assets/png/flecha.png" (click)="volverPagina()"></a>
 <ul class="ulPaginator" >
@@ -86,21 +105,8 @@
  </div>
   </div>
 
-  <div class="container-fluid">
-    <ngb-carousel>
-      <ng-template ngbSlide *ngFor="let image of images">
-        <div class="wrapper">
-          <img [src]="image.src" alt="Random first slide">
-        </div>
-        <div class="carousel-caption">
-          <h3>{{ image.title }}</h3>
-          <p>{{ image.short }}</p>
-        </div>
-      </ng-template>
-    </ngb-carousel>
 
-    </div>
-
+</div>
 </div>
 
 

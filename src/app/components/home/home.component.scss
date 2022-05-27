@@ -6,6 +6,13 @@
   visibility: hidden;
 }
 
+.hedersito{
+  box-shadow:  2px 2px 2px 0px #db0000;
+
+}
+
+
+
 .carousel-caption{
   display: none;
 }
@@ -19,6 +26,11 @@
   text-align: center;
 }
 
+.h1Titulo{
+  text-align: center;
+  background-color: beige;
+}
+
 
 .titulo2{
   text-align: center;
@@ -27,6 +39,13 @@
 
 .elemento1{
   width: 100%;
+  border-radius: 4px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
 }
 
 .paginator{
@@ -141,6 +160,13 @@ p{
   margin-top: 200px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 4px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
 
 }
 
@@ -176,6 +202,28 @@ p{
 
 }
 
+.wrapper{
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.imagenesCarousel{
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-fluid{
+  background: rgb(255, 255, 255);
+  border-radius: 4px;
+  position: relative;
+}
+
+
+
 @media(max-width: 400px){
   .paginator{
     display: none;
@@ -186,6 +234,13 @@ p{
     display: flex;
     justify-content: center;
    }
+
+   .wrapper{
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
 }
 
 
