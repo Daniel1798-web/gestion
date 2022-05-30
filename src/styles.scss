@@ -22,7 +22,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 a{
   text-decoration: none !important;
   color: black !important;
+}
 
+button{
+  background:none !important;
+  border: none;
 }
 
 .carousel-control-next, .carousel-control-prev{
