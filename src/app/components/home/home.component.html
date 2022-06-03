@@ -32,6 +32,7 @@ class="hedersito"
 
   <!--Paginator Mobile-->
   <div class="elemento1" *ngIf="activarMovile " >
+    
     <div class="titulo"> <h1 class="h1Titulo">Stocks guardados</h1> </div>
     <mat-paginator
     style-paginator showFirstLastButtons
@@ -58,6 +59,7 @@ class="hedersito"
 <!--Mostrar Stocks Guardados-->
 
   <div class="elemento1" *ngIf="activar2 " >
+    <div class="cajaStocks"> 
     <div class="titulo"> <h1 class="h1Titulo">Stocks guardados</h1> </div>
     <h2 class="titulo2" *ngIf="datosStockSaves.length === 0">No existen stocks almacenados</h2>
 
@@ -81,8 +83,11 @@ class="hedersito"
 
     </li>
 </ul>
+<div>
 <a *ngIf="datosStockSaves.length > 6" ><img  class="botonAvance" src="../../../assets/png/flecha2.png" (click)="pasarPagina()"></a>
- </div>
+</div>
+</div>
+</div>
 </div>
 <!--fin-->
 
