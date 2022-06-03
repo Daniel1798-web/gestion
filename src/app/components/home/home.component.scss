@@ -29,22 +29,25 @@
 
 .h1Titulo{
   text-align: center;
-  background-color: beige;
+  background-color: #d1d1d1;
+  box-shadow: 1px 2px 2px 2px #979797;
 }
 
 
 .titulo2Box{
     text-align: center;
-    color: beige;
-    background-color: blue;
+    color: rgb(0, 0, 0);
+    background-color: #d1d1d1;
     height: 200px;
     display: flex;
     justify-content: center;
+    margin-top: 200px;
+    box-shadow: 1px 2px 2px 2px #979797;
 }
 
 .titulo2{
   text-align: center;
-  color: beige;
+  color: rgb(2, 2, 0);
   margin-top: 70px;
 }
 
@@ -247,7 +250,7 @@ p{
 
 
 
-@media(max-width: 400px){
+@media(max-width: 500px){
   .paginator{
     display: none;
   }
@@ -266,7 +269,28 @@ p{
   }
 
   .padre{
+    width: 100%;
+    height: 100%;
     margin-top: 50px;
+  }
+
+  .elemento1{
+    display: block;
+    margin-top: 0px;
+  }
+
+  .titulo{
+    margin-top: 0px;
+  }
+
+  .titulo2Box{
+    text-align: center;
+    color: black;
+    background-color: #d1d1d1;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 2px 2px 2px #979797;
   }
 }
 
