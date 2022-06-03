@@ -33,7 +33,7 @@ class="hedersito"
   <!--Paginator Mobile-->
   <div class="elemento1" *ngIf="activarMovile " >
     
-    <div class="titulo"> <h1 class="h1Titulo">Stocks guardados</h1> </div>
+    <div class="titulo" *ngIf="datosStockSaves.length > 0"> <h1 class="h1Titulo">Stocks guardados</h1> </div>
     <div class="titulo2Box"  *ngIf="datosStockSaves.length === 0">
       <h2 class="titulo2">No existen stocks almacenados</h2>
     </div>

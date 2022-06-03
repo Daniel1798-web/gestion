@@ -464,7 +464,7 @@ cursor: pointer;
   text-align: center;
   color: #2c3e50;
   margin-top: 10px;
-
+  overflow: auto;
 }
 
 
@@ -839,6 +839,10 @@ margin: 2px;
     width: 100%;
     justify-content: space-around;
     background-color: beige;
+  }
+
+  .dady{
+    overflow: auto;
   }
 
   .añadirL2, .añadirC2 , .borrar2
