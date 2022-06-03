@@ -60,8 +60,13 @@ class="hedersito"
 
   <div class="elemento1" *ngIf="activar2 " >
     <div class="cajaStocks"> 
-    <div class="titulo"> <h1 class="h1Titulo">Stocks guardados</h1> </div>
-    <h2 class="titulo2" *ngIf="datosStockSaves.length === 0">No existen stocks almacenados</h2>
+    <div class="titulo" *ngIf="datosStockSaves.length > 0">
+       <h1 class="h1Titulo">Stocks guardados</h1> 
+    </div>
+    <div class="titulo2Box">
+      <h2 class="titulo2"  *ngIf="datosStockSaves.length === 0">No existen stocks almacenados</h2>
+    </div>
+
 
     <mat-paginator
     style-paginator showFirstLastButtons
