@@ -28,6 +28,7 @@ export class HederComponent implements OnInit {
     this.activeMenu = !this.activeMenu
     this.cierralo = !this.cierralo
     this.sideMenu.emit(this.cierralo)
+    
   }
 
   guardados(){
@@ -39,7 +40,6 @@ export class HederComponent implements OnInit {
   }
 
   guardadosMovile(){
-    this.toggleMenu()
     this.info = false
     this.stocksGuardadosMovile = !this.stocksGuardadosMovile
     this.activarGuardadosMobile.emit(this.stocksGuardadosMovile)
@@ -47,7 +47,8 @@ export class HederComponent implements OnInit {
   }
 
   informacion(){
-    this.toggleMenu()
+    this.stocksGuardados = false
+    this.stocksGuardadosMovile = false
     this.stocksGuardados = false
     this.info = !this.info
     this.activarInformacion.emit(this.info)
@@ -56,8 +57,10 @@ export class HederComponent implements OnInit {
   }
 
   loadStockPage(){
+    this.stocksGuardadosMovile = false
+    this.info = false
     this.toggleMenu()
     this.loadStockP.emit(this.loadStock)
-    console.log("activaInfo")
+    console.log("activaInfo2")
   }
 }

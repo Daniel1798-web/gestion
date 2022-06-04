@@ -39,6 +39,9 @@
     color: rgb(0, 0, 0);
     background-color: #d1d1d1;
     height: 200px;
+    width: 100%;
+    right: auto;
+    left: auto;
     display: flex;
     justify-content: center;
     margin-top: 200px;
@@ -250,7 +253,7 @@ p{
 
 
 
-@media(max-width: 420px){
+@media(max-width: 500px){
   .paginator{
     display: none;
   }
@@ -277,6 +280,7 @@ p{
   .elemento1{
     display: block;
     margin-top: 0px;
+    
   }
 
   .titulo{
@@ -284,8 +288,11 @@ p{
   }
 
   .titulo2Box{
+    width: 100%;
     text-align: center;
     color: black;
+    right: none;
+    left: none;
     background-color: #d1d1d1;
     height: 200px;
     display: flex;
