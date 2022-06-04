@@ -59,7 +59,6 @@ export class HederComponent implements OnInit {
   }
 
   loadStockPage(){
-    this.toggleMenu()
     this.loadStockP.emit(this.loadStock)
     console.log("activaInfo2")
   }

@@ -189,6 +189,8 @@ export class HomeComponent implements OnInit {
     this.page_number = e.pageIndex + 1
   }
 
+
+
   pasarPagina(){
     if(this.page_size < this.page_number){
       return null
@@ -221,7 +223,6 @@ export class HomeComponent implements OnInit {
     }
 
   }
-
   closeCarousel(e: boolean){
     if(e === false){  setTimeout(() => {
       this.cerrarCarousel = e
@@ -235,5 +236,6 @@ export class HomeComponent implements OnInit {
     }
 
     }
+  
 
 }
