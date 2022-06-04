@@ -173,6 +173,7 @@ export class HomeComponent implements OnInit {
 
   showInformacion(valor: boolean){
     this.activar2 = false
+    this.activarMovile = false
     this.activarInfo = valor
 
   }
