@@ -25,8 +25,8 @@ export class HederComponent implements OnInit {
   ngOnInit(): void {
   }
   toggleMenu(){
-    this.info = false
-    this.stocksGuardadosMovile = false
+    this.info = !this.info
+    this.stocksGuardadosMovile = !this.stocksGuardadosMovile
     this.activeMenu = !this.activeMenu
     this.cierralo = !this.cierralo
     this.sideMenu.emit(this.cierralo)
@@ -42,6 +42,9 @@ export class HederComponent implements OnInit {
   }
 
   guardadosMovile(){
+    this.toggleMenu()
+    this.sideMenu.emit(this.cierralo)
+
     this.info = false
     this.stocksGuardadosMovile = !this.stocksGuardadosMovile
     this.activarGuardadosMobile.emit(this.stocksGuardadosMovile)
@@ -58,8 +61,26 @@ export class HederComponent implements OnInit {
 
   }
 
+  
+
   loadStockPage(){
     this.loadStockP.emit(this.loadStock)
     console.log("activaInfo2")
+  }
+
+  loadStockPageMobile(){
+    this.toggleMenu()
+    this.loadStockP.emit(this.loadStock)
+    console.log("activaInfo2")
+  }
+
+  informacionMobile(){
+    this.toggleMenu()
+    this.stocksGuardados = false
+    this.stocksGuardadosMovile = false
+    this.stocksGuardados = false
+    this.info = !this.info
+    this.activarInformacion.emit(this.info)
+    console.log("activaInfoMobile")
   }
 }

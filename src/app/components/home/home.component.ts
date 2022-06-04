@@ -232,7 +232,7 @@ export class HomeComponent implements OnInit {
      setTimeout(() => {
         this.cerrarCarousel = e
 
-      }, 1000);
+      }, 200);
     }
 
     }
