@@ -70,15 +70,15 @@ export class HederComponent implements OnInit {
 
   loadStockPageMobile(){
     this.toggleMenu()
+    this.info = false
+    this.stocksGuardadosMovile = false
     this.loadStockP.emit(this.loadStock)
     console.log("activaInfo2")
   }
 
   informacionMobile(){
     this.toggleMenu()
-    this.stocksGuardados = false
     this.stocksGuardadosMovile = false
-    this.stocksGuardados = false
     this.info = !this.info
     this.activarInformacion.emit(this.info)
     console.log("activaInfoMobile")

@@ -155,13 +155,23 @@ export class HomeComponent implements OnInit {
   }
 
   volver(valor : boolean){
+    this.activarInfo = false
+    this.activar2 = false
     this.crearStock = false
+    this.showHome = true
+  }
+
+  volverMobile(valor : boolean){
+    this.crearStock = false
+    this.activarMovile = false
+    this.activarInfo = false
     this.showHome = true
   }
 
 
   showStockGuardados(valor: boolean) {
     this.activarInfo = false
+    this.activarMovile = false
     this.activar2 = valor
 
   }

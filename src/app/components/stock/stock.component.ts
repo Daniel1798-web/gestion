@@ -1,3 +1,4 @@
+import { TmplAstRecursiveVisitor } from '@angular/compiler';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {objeto1} from '../../model/objeto1.model'
 
@@ -23,6 +24,8 @@ export class StockComponent implements OnInit {
   @Output() sendData = new EventEmitter();
   @Output() carga = new EventEmitter();
   @Output() back = new EventEmitter();
+  @Output() back2 = new EventEmitter();
+
 
   ngOnInit(): void {
   }
@@ -80,6 +83,11 @@ export class StockComponent implements OnInit {
   backHome(){
       this.home = true
     return  this.back.emit(this.home)
+  }
+
+  backHomeMobile(){
+    this.home = true
+    return this.back2.emit(this.home)
   }
 
 }
