@@ -25,6 +25,8 @@ export class HederComponent implements OnInit {
   ngOnInit(): void {
   }
   toggleMenu(){
+    this.info = false
+    this.stocksGuardadosMovile = false
     this.activeMenu = !this.activeMenu
     this.cierralo = !this.cierralo
     this.sideMenu.emit(this.cierralo)
@@ -57,8 +59,6 @@ export class HederComponent implements OnInit {
   }
 
   loadStockPage(){
-    this.stocksGuardadosMovile = false
-    this.info = false
     this.toggleMenu()
     this.loadStockP.emit(this.loadStock)
     console.log("activaInfo2")
