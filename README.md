@@ -1,16 +1,2 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Stock2</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body class="mat-typography">
-  <app-root></app-root>
-</body>
-</html>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/43a17134-67ac-43f5-8454-065363b9504e/deploy-status)](https://app.netlify.com/sites/zippy-biscotti-1f7a5f/deploys)
+
