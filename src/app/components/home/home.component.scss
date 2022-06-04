@@ -56,7 +56,7 @@
 
 
 .elemento1{
-  display: flex;
+  display: block;
   justify-content: center;
   width: 100%;
   border-radius: 4px;
@@ -184,6 +184,7 @@ p{
 .elemento2{
   width: 800px;
   height: 250px;
+  background-color: #d5d5d5;
   border:2px solid rgb(185, 185, 185);
   box-shadow: 2px 2px 2px 2px rgb(216, 216, 216);
   margin-top: 200px;
@@ -298,6 +299,15 @@ p{
     display: flex;
     justify-content: center;
     box-shadow: 1px 2px 2px 2px #979797;
+  }
+
+  .elemento2{
+    width: 100%;
+  }
+
+  .inforCompany{
+    display: block;
+    margin-left:0px ;
   }
 }
 

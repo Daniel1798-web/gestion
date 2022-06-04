@@ -64,7 +64,7 @@ class="hedersito"
   <div class="elemento1" *ngIf="activar2 " >
     <div class="cajaStocks"> 
     <div class="titulo" *ngIf="datosStockSaves.length > 0">
-       <h1 class="h1Titulo">Stocks guardados 212</h1> 
+       <h1 class="h1Titulo">Stocks guardados</h1> 
     </div>
     <div class="titulo2Box"  *ngIf="datosStockSaves.length === 0">
       <h2 class="titulo2">No existen stocks almacenados</h2>
@@ -83,7 +83,9 @@ class="hedersito"
 </mat-paginator>
 
 <div class="botonesPaginator">
-  <a><img *ngIf="page_number > 1"   class="botonAtras" src="../../../assets/png/flecha.png" (click)="volverPagina()"></a>
+  <div>  
+    <a class="botonAtras"> <img *ngIf="page_number > 1"   class="botonAtras" src="../../../assets/png/flecha.png" (click)="volverPagina()"></a>
+  </div>
 <ul class="ulPaginator" >
 
   <li class="liPaginator" *ngFor="let l of datosStockSaves | paginator:page_size:page_number">
