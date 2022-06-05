@@ -134,6 +134,7 @@ export class HomeComponent implements OnInit {
 
   array2:Array<any> = [5]
   pageSizeOptions2 = [1]
+  pageSize2:number = 1;
 
 
   helpText:string = "Ante cualquier problema consultenos";

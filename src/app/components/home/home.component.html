@@ -41,16 +41,26 @@ class="hedersito"
     style-paginator showFirstLastButtons
     class="paginatorMobile"
     [length]="listaStocks.length"
-    [pageSize]="page_size"
+    [pageSize]="pageSize2"
     [pageSizeOptions]="pageSizeOptions2"
     (page)="handlePage($event)"
     aria-label="Select page">
 </mat-paginator>
+
+
+<div class="botonesPaginator">
+  <div>  
+    <a > <img *ngIf="page_number > 1"   class="botonAtras" src="../../../assets/png/flecha.png" (click)="volverPagina()"></a>
+  </div>
 <ul class="ulPaginator">
   <li class="liPaginator" *ngFor="let l of datosStockSaves | paginator:page_size:page_number">
     <a class="aPaginator" href="/"><p >{{l.id}}</p></a>
     </li>
   </ul>
+  <div>
+    <a *ngIf="datosStockSaves.length > 6" ><img  class="botonAvance" src="../../../assets/png/flecha2.png" (click)="pasarPagina()"></a>
+    </div>
+</div>
 </div>
 
 
@@ -84,7 +94,7 @@ class="hedersito"
 
 <div class="botonesPaginator">
   <div>  
-    <a class="botonAtras"> <img *ngIf="page_number > 1"   class="botonAtras" src="../../../assets/png/flecha.png" (click)="volverPagina()"></a>
+    <a > <img *ngIf="page_number > 1"   class="botonAtras" src="../../../assets/png/flecha.png" (click)="volverPagina()"></a>
   </div>
 <ul class="ulPaginator" >
 
