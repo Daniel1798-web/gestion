@@ -89,6 +89,7 @@
 
  .ulPaginator{
   display: flex;
+  padding: 0px;
   flex-direction: row;
   justify-content: space-around;
   list-style: none;
@@ -260,6 +261,11 @@ p{
     background-color:  #ecf0f3;
     display: flex;
     justify-content: center;
+   }
+
+
+   .ulPaginator{
+     padding: 0px;
    }
 
    .wrapper{

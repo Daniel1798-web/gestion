@@ -54,12 +54,25 @@ class="hedersito"
   </div>
 <ul class="ulPaginator">
   <li class="liPaginator" *ngFor="let l of datosStockSaves | paginator:page_size:page_number">
-    <a class="aPaginator" href="/"><p >{{l.id}}</p></a>
+    <a class="aPaginator" ><p (click)="mostrarGuardado()">{{l}}</p></a>
     </li>
   </ul>
   <div>
     <a *ngIf="datosStockSaves.length > 6" ><img  class="botonAvance" src="../../../assets/png/flecha2.png" (click)="pasarPagina()"></a>
     </div>
+</div>
+</div>
+
+<div class="elemento2" *ngIf="textPaginator">
+
+<div class="inforCompany">
+  <div class="inforNumber">
+    <p>24/08/2022</p>
+  </div>
+  <div class="inforNumber">
+    <img class="descarga" src="../../../assets/png/descarga.png">
+
+  </div>
 </div>
 </div>
 

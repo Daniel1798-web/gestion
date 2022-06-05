@@ -136,6 +136,7 @@ export class HomeComponent implements OnInit {
   pageSizeOptions2 = [1]
   pageSize2:number = 1;
 
+  textPaginator = false
 
   helpText:string = "Ante cualquier problema consultenos";
 
@@ -246,6 +247,11 @@ export class HomeComponent implements OnInit {
       }, 200);
     }
 
+    }
+
+
+    mostrarGuardado(){
+      this.textPaginator = !this.textPaginator
     }
   
 
