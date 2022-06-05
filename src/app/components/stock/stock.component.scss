@@ -540,7 +540,35 @@ box-shadow: 1px 1px 1px 1px rgb(68, 68, 68);
 }
 
 
-.añadirL, .añadirC , .borrar
+.añadirL{
+  background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border: 2px solid rgb(196, 196, 196);
+    padding: 5px;
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    word-wrap:break-word;
+}
+
+.añadirC{
+  background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border: 2px solid rgb(196, 196, 196);
+    padding: 5px;
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    word-wrap:break-word;
+}
+
+ .borrar
 {
 
     background-color: rgb(255, 255, 255);
@@ -954,7 +982,14 @@ margin: 2px;
 
 
 
-@media  (max-width: 780px) and (max-height: 780px) {   
+
+
+
+
+
+
+@media  (max-width: 780px) and (max-height: 780px) {  
+
   *{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
