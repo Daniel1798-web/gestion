@@ -58,7 +58,7 @@
 .elemento1{
   display: block;
   justify-content: center;
-  width: 100%;
+  width: 800px;
   border-radius: 4px;
   left: 0;
   top: 0;
@@ -284,7 +284,7 @@ p{
   .elemento1{
     display: block;
     margin-top: 0px;
-    
+    width: 100%;
   }
 
   .titulo{
@@ -348,6 +348,11 @@ p{
   .inforCompany{
     display: block;
     margin-left:0px ;
+  }
+
+  .inforNumber2{
+    display: flex;
+    justify-content: center;
   }
 }
 
