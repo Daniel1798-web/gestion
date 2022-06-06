@@ -1,6 +1,6 @@
 import { TmplAstRecursiveVisitor } from '@angular/compiler';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import {objeto1} from '../../model/objeto1.model'
+import {objeto1 , objeto2} from '../../model/objeto1.model'
 
 @Component({
   selector: 'app-stock',
@@ -17,15 +17,22 @@ export class StockComponent implements OnInit {
   agregarProducto: string | number = ""
   lista1:Array<objeto1> = [];
   lista2:Array<objeto1> = [];
+  fecha:Date = new Date();
   checkk = false;
   agregarFecha: number  = 0;
 
   saveList:any = [];
   @Output() sendData = new EventEmitter();
+  @Output() sendData2 = new EventEmitter();
   @Output() carga = new EventEmitter();
   @Output() back = new EventEmitter();
   @Output() back2 = new EventEmitter();
 
+  stockObject:objeto2 ={
+    columna1 : this.lista1,
+    columna2 : this.lista2,
+    fecha : this.fecha,
+  };
 
   ngOnInit(): void {
   }
@@ -74,9 +81,12 @@ export class StockComponent implements OnInit {
   }
 
   stockAdd(){
+    this.fecha;
     this.guardarStock()
     this.stock++
-    this.sendData.emit(this.stock)
+    this.sendData.emit(this.stockObject)
+    this.sendData2.emit(this.stock)
+
   }
 
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
-import { objeto1 } from '../../model/objeto1.model'
+import { objeto1, objeto2} from '../../model/objeto1.model'
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
@@ -44,6 +44,11 @@ export class HomeComponent implements OnInit {
     {title: 'Third Slide', short: 'Third Slide Short', src: "../../../assets/images/work.jpg"}
   ];
 
+  col:objeto2 = {
+    columna1:{},
+    columna2:{},
+    fecha:0,
+  }
 
   cerrarCarousel = true;
   datosStockSaves:any = [];
@@ -222,6 +227,11 @@ export class HomeComponent implements OnInit {
 
   reciveData(valor:any){
       this.datosStockSaves.push(valor)
+    
+  }
+
+  reciveData2(valor : any){
+      this.col = valor
   }
 
   largo(){

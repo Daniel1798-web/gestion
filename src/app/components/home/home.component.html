@@ -112,7 +112,7 @@ class="hedersito"
 <ul class="ulPaginator" >
 
   <li class="liPaginator" *ngFor="let l of datosStockSaves | paginator:page_size:page_number">
-    <a class="aPaginator"><p>{{l}}</p><img class="descarga" src="../../../assets/png/descarga.png"></a>
+    <a class="aPaginator" (click)="mostrarGuardado()"><p>{{l}}</p><img class="descarga" src="../../../assets/png/descarga.png"></a>
 
     </li>
 </ul>
@@ -122,6 +122,21 @@ class="hedersito"
 </div>
 </div>
 </div>
+
+
+<div class="elemento2" *ngIf="textPaginator">
+
+  <div class="inforCompany">
+    <div class="inforNumber2">
+      <p>{{col.fecha}}</p>
+      <p>{{col.columna1.producto}}</p>
+    </div>
+    <div class="inforNumber2">
+      <img class="descarga" src="../../../assets/png/descarga.png">
+  
+    </div>
+  </div>
+  </div>
 <!--fin-->
 
 <!--Mostrar Información-->
@@ -150,7 +165,8 @@ class="hedersito"
 
 </div>
   <app-stock class="nada" *ngIf="crearStock"
-  (sendData)="reciveData($event)"
+  (sendData)="reciveData2($event)"
+  (sendData2)="reciveData($event)"
   (back)="volver($event)"
   (back2)="volverMobile($event)"
   ></app-stock>
