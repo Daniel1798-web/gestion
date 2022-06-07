@@ -11,11 +11,13 @@
 
   <div class="side-menu" [class.active]="activeMenu">
     <button class="xMobile" (click)="toggleMenu()"><img src="../../../assets/png/x.png"></button>
-    <ul>
-      <li><a class="enlace" (click)="loadStockPageMobile()">Crear Stock</a></li>
-      <li><button class="enlace" (click)="guardadosMovile()" >Stock Guardados</button></li>
-      <li><a class="enlace" (click)="informacionMobile()">Información</a></li>
-    </ul>
+    <div class="divSid">
+    <ul class="ulSid">
+      <li class="liSid"><a class="enlace" (click)="loadStockPageMobile()">Crear Stock</a></li>
+      <li class="liSid"><a class="enlace" (click)="guardadosMovile()" >Stock Guardados</a></li>
+      <li class="liSid"><a class="enlace" (click)="informacionMobile()">Información</a></li>
+    </ul></div>
+    
   </div>
   </div>
 </div>

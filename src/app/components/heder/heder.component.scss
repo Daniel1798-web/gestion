@@ -46,6 +46,29 @@
 
 }
 
+.divSid{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 0px;
+}
+
+.ulSid{
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+.liSid{
+    text-align: center;
+}
+
 .logo {
   width: 32px;
   height: 32px;

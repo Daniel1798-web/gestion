@@ -17,7 +17,7 @@ export class StockComponent implements OnInit {
   agregarProducto: string | number = ""
   lista1:Array<objeto1> = [];
   lista2:Array<objeto1> = [];
-  fecha:Date = new Date();
+  fecha:any = Date();
   checkk = false;
   agregarFecha: number  = 0;
 

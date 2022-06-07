@@ -226,12 +226,13 @@ export class HomeComponent implements OnInit {
   }
 
   reciveData(valor:any){
-      this.datosStockSaves.push(valor)
-    
+      //this.datosStockSaves.push(valor)
+    console.log("holas")
   }
 
   reciveData2(valor : any){
       this.col = valor
+      this.datosStockSaves.push(this.col)
   }
 
   largo(){

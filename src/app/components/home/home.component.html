@@ -112,7 +112,7 @@ class="hedersito"
 <ul class="ulPaginator" >
 
   <li class="liPaginator" *ngFor="let l of datosStockSaves | paginator:page_size:page_number">
-    <a class="aPaginator" (click)="mostrarGuardado()"><p>{{l}}</p><img class="descarga" src="../../../assets/png/descarga.png"></a>
+    <a class="aPaginator" (click)="mostrarGuardado()"><p>{{l.fecha}}</p><img class="descarga" src="../../../assets/png/descarga.png"></a>
 
     </li>
 </ul>
@@ -129,7 +129,7 @@ class="hedersito"
   <div class="inforCompany">
     <div class="inforNumber2">
       <p>{{col.fecha}}</p>
-      <p>{{col.columna1.producto}}</p>
+      <p>{{col.columna1[0].producto}}</p>
     </div>
     <div class="inforNumber2">
       <img class="descarga" src="../../../assets/png/descarga.png">
